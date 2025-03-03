@@ -1,0 +1,15 @@
+.card{
+    button{
+        transform: translateY(130%) ;
+        transition:all 0.7s;
+        margin-bottom: 10px;
+        cursor: pointer;
+        opacity: 0;
+    }
+    &:hover{
+        button{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}

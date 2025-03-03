@@ -1,0 +1,26 @@
+<section class="px-10 py-10">
+	<div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 py-4">
+		@for (item of Products; track $index) {
+		<div class="card border border-green-400/50 rounded-md overflow-hidden hover:cursor-pointer shadow relative">
+			<div [routerLink]="['/details' , item._id]">
+				<div class="card-img">
+					<img [src]=" item.imageCover " class="w-full h-[250px] object-contain" [alt]=" item.title " />
+				</div>
+				<div class="card-body px-6 py-4">
+					<h4 class="text-green-500 text-xs">{{item.category.name}}</h4>
+					<h3 class="font-medium">{{item.title.split(" ",2).join(" ")}}</h3>
+					<div class="flex justify-between items-center">
+						<span>{{item.price}} EGP </span>
+						<div class="flex items-center">
+							<i class="fas fa-star text-yellow-500"></i>
+							<span class="text-gray-500">{{item.ratingsAverage}}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class=" bg-green-600 text-white py-2 w-[85%] block mx-auto  border rounded-md" (click)="AddtoCart( item._id)" >Add to Cart</button>
+
+		</div>
+		}
+	</div>
+</section>

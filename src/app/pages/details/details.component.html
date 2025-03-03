@@ -1,0 +1,132 @@
+@if ( detailsProduct ) {
+	<div class="bg-white">
+		<div class="pt-6">
+	
+			<!-- Image gallery -->
+			<div class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
+			@if ( detailsProduct.images.length >= 4 ) {
+				<img src="{{detailsProduct.images[0]}}"  class="hidden size-full rounded-lg object-cover lg:block">
+				<div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
+					<img src="{{detailsProduct.images[1]}}"  class="aspect-3/2 w-full rounded-lg object-cover">
+					<img src="{{detailsProduct.images[2]}}"  class="aspect-3/2 w-full rounded-lg object-cover">
+				</div>
+				<img src="{{detailsProduct.images[3]}}"  class="aspect-4/5 size-full object-cover sm:rounded-lg lg:aspect-auto">
+			}
+			@else if ( detailsProduct.images.length == 3 ) {
+				<img src="{{detailsProduct.images[0]}}"  class="hidden size-full rounded-lg object-cover lg:block">
+				<div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
+					<img src="{{detailsProduct.images[1]}}"  class="aspect-3/2 w-full rounded-lg object-cover">
+					<img src="{{detailsProduct.images[2]}}"  class="aspect-3/2 w-full rounded-lg object-cover">
+				</div>
+			}
+			@else if ( detailsProduct.images.length == 2 ) {
+				<img src="{{detailsProduct.images[0]}}"  class="hidden size-full rounded-lg object-cover lg:block">
+				<div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
+					<img src="{{detailsProduct.images[1]}}"  class="size-full w-full rounded-lg object-cover">
+				</div>
+			}
+			</div>
+	
+	
+			<!-- Product info -->
+			<div
+				class=" mx-auto max-w-2xl px-4 pt-10 pb-16 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto_auto_1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-24">
+				<div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+					<h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{{detailsProduct.title}}</h1>
+				</div>
+	
+				<!-- Options -->
+				<div class="mt-4 lg:row-span-3 lg:mt-0">
+					<h2 class="sr-only">Product information</h2>
+					<p class="text-3xl tracking-tight text-gray-900">{{detailsProduct.price}} EGP</p>
+	
+					<!-- Reviews -->
+					<div class="mt-6">
+						<h3 class="sr-only">Reviews</h3>
+						<div class="flex items-center">
+							<div class="flex items-center">
+								<svg class="size-5 shrink-0 text-yellow-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+									data-slot="icon">
+									<path fill-rule="evenodd"
+										d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+										clip-rule="evenodd" />
+								</svg>
+								<svg class="size-5 shrink-0 text-yellow-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+									data-slot="icon">
+									<path fill-rule="evenodd"
+										d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+										clip-rule="evenodd" />
+								</svg>
+								<svg class="size-5 shrink-0 text-yellow-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+									data-slot="icon">
+									<path fill-rule="evenodd"
+										d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+										clip-rule="evenodd" />
+								</svg>
+								<svg class="size-5 shrink-0 text-yellow-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+									data-slot="icon">
+									<path fill-rule="evenodd"
+										d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+										clip-rule="evenodd" />
+								</svg>
+								<svg class="size-5 shrink-0 text-gray-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"
+									data-slot="icon">
+									<path fill-rule="evenodd"
+										d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z"
+										clip-rule="evenodd" />
+								</svg>
+							</div>
+							<a href="#" class="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">{{detailsProduct.ratingsQuantity}} reviews</a>
+						</div>
+					</div>
+	
+					<form class="mt-10">
+						<!-- Colors -->
+						<div>
+							<h3 class="text-sm font-medium text-gray-900">Color</h3>
+	
+							<fieldset aria-label="Choose a color" class="mt-4">
+								<div class="flex items-center gap-x-3">
+									<!-- Active and Checked: "ring-3 ring-offset-1" -->
+									<label aria-label="White"
+										class="relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 ring-gray-400 focus:outline-hidden">
+										<input type="radio" name="color-choice" value="White" class="sr-only">
+										<span aria-hidden="true" class="size-8 rounded-full border border-black/10 bg-red-300"></span>
+									</label>
+									<!-- Active and Checked: "ring-3 ring-offset-1" -->
+									<label aria-label="Gray"
+										class="relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 ring-gray-400 focus:outline-hidden">
+										<input type="radio" name="color-choice" value="Gray" class="sr-only">
+										<span aria-hidden="true" class="size-8 rounded-full border border-black/10 bg-teal-300"></span>
+									</label>
+									<!-- Active and Checked: "ring-3 ring-offset-1" -->
+									<label aria-label="Black"
+										class="relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 ring-gray-900 focus:outline-hidden">
+										<input type="radio" name="color-choice" value="Black" class="sr-only">
+										<span aria-hidden="true" class="size-8 rounded-full border border-black/10 bg-violet-400"></span>
+									</label>
+								</div>
+							</fieldset>
+						</div>
+	
+						<button type="submit" (click)="AddtoCart( detailsProduct._id)"
+							class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent cursor-pointer bg-green-600 px-8 py-3 text-base font-medium text-white hover:bg-green-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden">Add
+							to Cart</button>
+					</form>
+				</div>
+	
+				<div class="py-5 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pt-6 lg:pr-8 lg:pb-16">
+					<!-- Description -->
+					<div>
+						<h3 class="sr-only">Description</h3>
+	
+						<div class="space-y-4">
+							<p class="text-base text-gray-900">{{detailsProduct.description}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum in quis deleniti quas eligendi nobis aliquam quibusdam sit esse magnam Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad mollitia molestiae ea provident. Voluptates voluptate quia dolores sed, perferendis necessitatibus?</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+}
