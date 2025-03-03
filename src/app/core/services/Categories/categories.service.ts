@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-=======
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
->>>>>>> 13e594b (Initial commit)
 import { Observable } from 'rxjs';
 
 
@@ -13,7 +9,6 @@ import { Observable } from 'rxjs';
 })
 export class CategoriesService {
 
-<<<<<<< HEAD
   constructor(private httpClient: HttpClient) { }
 
   getAllCategories():Observable<any>{
@@ -23,13 +18,7 @@ export class CategoriesService {
     return this.httpClient.get(`https://ecommerce.routemisr.com/api/v1/categories/${id}`);
   }
 
-=======
-  constructor( private httpClient:HttpClient) { }
 
-  getAllCategories():Observable<any>
-  {
-    return this.httpClient.get('https://ecommerce.routemisr.com/api/v1/categories');
-  }
 
   getSpecificCategories( id:string ):Observable<any>
   {
@@ -41,5 +30,4 @@ export class CategoriesService {
   GetBrands():Observable<any>{
     return this.httpClient.get('https://ecommerce.routemisr.com/api/v1/brands');
   }
->>>>>>> 13e594b (Initial commit)
 }
