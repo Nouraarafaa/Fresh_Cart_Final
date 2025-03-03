@@ -1,8 +1,7 @@
 @import "tailwindcss";
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
-@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
-@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
 
 .btn-main {
     @apply transition-colors duration-300 cursor-pointer bg-green-600 text-white px-10 py-2 border rounded-lg hover:bg-green-700
