@@ -86,13 +86,13 @@
 
 					<div class="space-y-4">
 						<div class="space-y-2">
-							<dl class="flex items-center justify-between gap-4">
+							<dl class="flex items-center justify-between gap-10">
 								<dt class="text-base font-normal text-gray-500 dark:text-gray-400">Original price</dt>
 								<dd class="text-base font-medium text-gray-900 dark:text-white">
 									{{ cartdetails.totalCartPrice }} EGP
 								</dd>
 							</dl>
-							<dl class="flex items-center justify-between gap-4">
+							<dl class="flex items-center justify-between gap-10">
 								<dt class="text-base font-normal text-gray-500 dark:text-gray-400">Tax (15%)</dt>
 								<dd class="text-base font-medium text-gray-900 dark:text-white">
 									{{((15/100) * cartdetails.totalCartPrice).toFixed(2)}} EGP
@@ -109,7 +109,7 @@
 						</dl>
 					</div>
 					<button [routerLink]="['/checkout', cartdetails._id]"
-						class="flex w-full items-center justify-center rounded-lg bg-green-600 px-5 py-2.5 text-md text-white hover:bg-green-700 duration-300 cursor-pointer"
+						class="flex w-full items-center justify-center rounded-lg bg-green-600 px-5 py-3 text-md text-white hover:bg-green-700 duration-300 cursor-pointer"
 						data-modal-target="popup-modal" data-modal-toggle="popup-modal" type="button">
 						Procceed to Checkout
 					</button>
@@ -140,7 +140,7 @@
 								placeholder="" required />
 						</div>
 						<button type="submit"
-							class="flex w-full items-center duration-300 cursor-pointer justify-center rounded-lg bg-green-600 px-5 py-2.5 text-md font-medium text-white  focus:outline-none hover:bg-green-700">Apply
+							class="flex w-full items-center duration-300 cursor-pointer justify-center rounded-lg bg-green-600 px-5 py-3 text-md font-medium text-white  focus:outline-none hover:bg-green-700">Apply
 							Code</button>
 					</form>
 				</div>
